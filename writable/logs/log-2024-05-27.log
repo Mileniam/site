@@ -1,0 +1,14 @@
+ERROR - 2024-05-27 00:27:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\Proyecto\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto\system\Database\MySQLi\Connection.php(295): mysqli->query('SHOW TABLES FRO...', 0)
+#1 C:\xampp\htdocs\Proyecto\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SHOW TABLES FRO...')
+#2 C:\xampp\htdocs\Proyecto\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\Proyecto\system\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\Proyecto\system\Database\BaseConnection.php(1427): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\Proyecto\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\xampp\htdocs\Proyecto\system\Database\MigrationRunner.php(706): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\Proyecto\system\Commands\Database\MigrateRollback.php(89): CodeIgniter\Database\MigrationRunner->getLastBatch()
+#8 C:\xampp\htdocs\Proyecto\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 C:\xampp\htdocs\Proyecto\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 C:\xampp\htdocs\Proyecto\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
